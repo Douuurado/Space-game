@@ -1,0 +1,38 @@
+[33mcommit 414d7512dcaf08affb295036dc66524d7a33686c[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 2f39d7e 2415d52
+Author: Adryan <155921766+Douuurado@users.noreply.github.com>
+Date:   Thu Apr 23 02:37:41 2026 -0300
+
+    Merge pull request #1 from Douuurado/feature/personagem
+    
+    Update player.tscn
+
+[33mcommit 2415d528e132b3181300d4003fb04a16e2d689ec[m[33m ([m[1;31morigin/feature/personagem[m[33m, [m[1;32mfeature/personagem[m[33m)[m
+Author: Adryan <Douuuradodev@gmail.com>
+Date:   Thu Apr 23 02:37:05 2026 -0300
+
+    Update player.tscn
+
+[33mcommit 2f39d7ec14a2dde6421307f52ba10e332a49da06[m
+Author: Adryan <Douuuradodev@gmail.com>
+Date:   Thu Apr 23 02:31:39 2026 -0300
+
+    teste1
+
+[33mcommit 4849097444d141479d50def8182137e5ef8dd83d[m
+Author: Adryan <Douuuradodev@gmail.com>
+Date:   Thu Apr 23 02:22:21 2026 -0300
+
+    teste
+
+[33mcommit 659db29fbe52d46db5ef6c054bec0c42b24961cf[m
+Author: Adryan <Douuuradodev@gmail.com>
+Date:   Thu Apr 23 02:05:32 2026 -0300
+
+    Primeiro commit - Projeto base
+
+[33mcommit ddaf2246ea7a76057b2350574a35570b5e386b1d[m
+Author: Adryan <Douuuradodev@gmail.com>
+Date:   Thu Apr 23 02:04:16 2026 -0300
+
+    Initial commit
