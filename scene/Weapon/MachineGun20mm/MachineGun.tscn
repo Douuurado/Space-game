@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bfdb0n8dl37nh"]
+
+[ext_resource type="Script" uid="uid://mxsryrr05dcp" path="res://scene/Weapon/MachineGun20mm/20mm.gd" id="1_xo4tu"]
+
+[node name="MachineGun" type="Node2D" unique_id=1293347082]
+script = ExtResource("1_xo4tu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=628246297]
+
+[node name="Muzzle" type="Marker2D" parent="." unique_id=1606237604]

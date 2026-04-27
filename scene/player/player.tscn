@@ -1,10 +1,13 @@
-[gd_scene format=3 uid="uid://c7ylo38lqtu6d"]
+[gd_scene format=3 uid="uid://c6arh5m36pft7"]
 
 [ext_resource type="Script" uid="uid://o4whh86qynu0" path="res://scene/player/player.gd" id="1_hdaae"]
 [ext_resource type="Texture2D" uid="uid://iue7y1myi8d0" path="res://asset/art/player/icon.svg" id="2_yagh2"]
+[ext_resource type="PackedScene" uid="uid://krihsiu45q2a" path="res://scene/Weapon/PX-9 9MM/PX-9.tscn" id="3_6smn3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qx6th"]
 radius = 63.0714
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5lop3"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1736269669]
 script = ExtResource("1_hdaae")
@@ -20,3 +23,6 @@ shape = SubResource("CircleShape2D_qx6th")
 
 [node name="Hurtbox" type="CollisionShape2D" parent="." unique_id=1367863966]
 position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_5lop3")
+
+[node name="Weapon" parent="." unique_id=35728206 instance=ExtResource("3_6smn3")]

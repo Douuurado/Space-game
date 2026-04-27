@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://hxjppm4a3inl"]
+
+[ext_resource type="Script" uid="uid://dop0llwnmjw8b" path="res://scene/Weapon/PrecisionDMR rem243/rem243.gd" id="1_5n7qc"]
+
+[node name="PrecisionDmr" type="Node2D" unique_id=1348353924]
+script = ExtResource("1_5n7qc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1056894490]
+
+[node name="Muzzle" type="Marker2D" parent="." unique_id=1921477817]

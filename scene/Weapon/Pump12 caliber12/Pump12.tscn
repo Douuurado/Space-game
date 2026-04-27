@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://3l751axw0ale"]
+
+[node name="Pump12" type="Node2D" unique_id=1942590321]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=738648367]
+
+[node name="Muzzle" type="Marker2D" parent="." unique_id=1502956866]

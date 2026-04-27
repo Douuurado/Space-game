@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://4hne8amk4cj8"]
+
+[ext_resource type="Script" uid="uid://em06spk6w2kl" path="res://scene/Weapon/ColtPython .367Magnum/367Magnum.gd" id="1_h2xwx"]
+
+[node name="Weapon" type="Node2D" unique_id=35728206]
+script = ExtResource("1_h2xwx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1505295188]
+
+[node name="Muzzle" type="Marker2D" parent="." unique_id=1948341591]
