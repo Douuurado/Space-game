@@ -15,9 +15,9 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Space Game"
-run/main_scene="res://scene/main/main.tscn"
+run/main_scene="res://scenes/main/Main.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://asset/art/player/icon.svg"
+config/icon="res://assets/art/player/icon.svg"
 
 [input]
 

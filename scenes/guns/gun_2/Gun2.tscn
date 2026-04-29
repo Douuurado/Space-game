@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://4hne8amk4cj8"]
+
+[ext_resource type="Script" uid="uid://em06spk6w2kl" path="res://scenes/guns/gun_2/gun_2.gd" id="1_h2xwx"]
+[ext_resource type="PackedScene" uid="uid://c3peyjymbsnrp" path="res://systems/bullet/Bullet.tscn" id="2_gj21f"]
+[ext_resource type="Texture2D" uid="uid://bsj02a3t4jnxx" path="res://assets/art/player/SpaceShip.png" id="3_yibfc"]
+
+[node name="Gun2" type="Node2D" unique_id=35728206]
+script = ExtResource("1_h2xwx")
+bullet_scene = ExtResource("2_gj21f")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1505295188]
+position = Vector2(115, 40)
+texture = ExtResource("3_yibfc")
+
+[node name="Muzzle" type="Marker2D" parent="." unique_id=1948341591]
+position = Vector2(115, 40)
