@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://bopih8m78kjvn"]
+
+[ext_resource type="Script" uid="uid://3yiuh5mml7su" path="res://scenes/enemy.gd" id="1_8u16h"]
+[ext_resource type="Texture2D" uid="uid://b3dpcaj4r2ynk" path="res://assets/art/sprites/2 - Fairy/Flying_Forward_Movement (32 x 32).png" id="1_h08p8"]
+[ext_resource type="Script" uid="uid://c7ggrpnugaas5" path="res://scenes/animated_sprite_2d.gd" id="2_f87vc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f87vc"]
+radius = 26.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8u16h"]
+atlas = ExtResource("1_h08p8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b7koy"]
+atlas = ExtResource("1_h08p8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yvcfn"]
+atlas = ExtResource("1_h08p8")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulb22"]
+atlas = ExtResource("1_h08p8")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1e552"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8u16h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b7koy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yvcfn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ulb22")
+}],
+"loop": true,
+"name": &"voando",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_vgurf"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_kqmod"]
+resource_name = "voando"
+length = 0.4
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qhqle"]
+_data = {
+&"RESET": SubResource("Animation_vgurf"),
+&"voando": SubResource("Animation_kqmod")
+}
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1487198731]
+position = Vector2(34, 7)
+script = ExtResource("1_8u16h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1128735772]
+position = Vector2(122, 35)
+shape = SubResource("CircleShape2D_f87vc")
+
+[node name="anim" type="AnimatedSprite2D" parent="CollisionShape2D" unique_id=1521946421]
+position = Vector2(-4, -2)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_1e552")
+animation = &"voando"
+frame_progress = 0.45022193
+script = ExtResource("2_f87vc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CollisionShape2D/anim" unique_id=1648321730]
+libraries/ = SubResource("AnimationLibrary_qhqle")

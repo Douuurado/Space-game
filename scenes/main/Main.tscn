@@ -2,10 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://b0dt72g5bijrw" path="res://ui/camera/Hud.tscn" id="1_nha0i"]
 [ext_resource type="PackedScene" uid="uid://c7ylo38lqtu6d" path="res://scenes/player/Player.tscn" id="2_q24mn"]
+[ext_resource type="PackedScene" uid="uid://c4d5gtc3sq88h" path="res://scenes/enemy/enemy.tscn" id="3_q24mn"]
 
 [node name="Main" type="Node2D" unique_id=1009177283]
 
 [node name="HUD" parent="." unique_id=932834913 instance=ExtResource("1_nha0i")]
 position = Vector2(2, 3)
 
-[node name="CharacterBody2D" parent="." unique_id=1736269669 instance=ExtResource("2_q24mn")]
+[node name="player" parent="." unique_id=1736269669 groups=["player"] instance=ExtResource("2_q24mn")]
+
+[node name="enemy" parent="." unique_id=1987033887 instance=ExtResource("3_q24mn")]
+position = Vector2(331, 77)

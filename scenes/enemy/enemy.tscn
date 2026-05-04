@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://c4d5gtc3sq88h"]
+
+[ext_resource type="Texture2D" uid="uid://b3dpcaj4r2ynk" path="res://assets/art/sprites/2 - Fairy/Flying_Forward_Movement (32 x 32).png" id="1_4a83h"]
+[ext_resource type="Script" uid="uid://dlfmuhai7gvf3" path="res://scenes/enemy/enemy.gd" id="1_a3pup"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a3pup"]
+radius = 27.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_40wdo"]
+atlas = ExtResource("1_4a83h")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjssy"]
+atlas = ExtResource("1_4a83h")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gl05p"]
+atlas = ExtResource("1_4a83h")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cwlon"]
+atlas = ExtResource("1_4a83h")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nbhyu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_40wdo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tjssy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gl05p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cwlon")
+}],
+"loop": true,
+"name": &"voando",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_40wdo"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_13gj6"]
+resource_name = "voando"
+length = 0.4
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4efjx"]
+_data = {
+&"RESET": SubResource("Animation_40wdo"),
+&"voando": SubResource("Animation_13gj6")
+}
+
+[node name="enemy" type="CharacterBody2D" unique_id=1987033887]
+script = ExtResource("1_a3pup")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1690784559]
+position = Vector2(-39, -15)
+shape = SubResource("CircleShape2D_a3pup")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D" unique_id=737860359]
+texture_filter = 1
+position = Vector2(-5, 1)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_nbhyu")
+animation = &"voando"
+frame = 2
+frame_progress = 0.5677416
+speed_scale = 0.5
+offset = Vector2(1, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CollisionShape2D/AnimatedSprite2D" unique_id=417858189]
+libraries/ = SubResource("AnimationLibrary_4efjx")
